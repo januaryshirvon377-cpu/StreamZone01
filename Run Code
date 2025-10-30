@@ -1,0 +1,21 @@
+<button
+  onClick={() => {
+    try {
+      // Capture console.log output
+      const logs = []
+      const originalLog = console.log
+      console.log = (...args) => logs.push(args.join(' '))
+
+      // eslint-disable-next-line no-eval
+      eval(code) // Runs the current editor code
+
+      console.log = originalLog
+      alert("✅ Code ran successfully!\n\n" + (logs.join("\n") || "No output"))
+    } catch (error) {
+      alert("❌ Error:\n" + error.message)
+    }
+  }}
+  className="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded text-white font-semibold mt-4"
+>
+  ▶️ Run Code
+</button>
