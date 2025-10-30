@@ -1,0 +1,16 @@
+streamzone/
+│
+├── pages/
+│   ├── _app.js
+│   └── index.js
+│
+├── styles/
+│   └── globals.css
+│
+├── public/
+│   └── favicon.ico   (optional)
+│
+├── tailwind.config.js
+├── postcss.config.js
+├── package.json
+└── next.config.js
